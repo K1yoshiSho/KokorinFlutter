@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/textHw.dart';
+import 'package:flutter_application_1/text_hw.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kokorin: Flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme:
+          ThemeData(primarySwatch: Colors.blue, primaryColor: Colors.blue[100]),
       home: const MyHomePage(title: 'Home'),
     );
   }
@@ -33,6 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MyText();
+    return MyText(title: 'Salem');
   }
 }
