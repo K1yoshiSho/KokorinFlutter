@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/text_hw.dart';
+
+import 'inLessons/progress.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +33,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MyText(title: 'Salem');
+    return MyProgressBar(title: 'Salem');
   }
 }
