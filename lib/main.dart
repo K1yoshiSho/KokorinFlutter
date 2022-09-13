@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'homeWorks/counter.dart';
 import 'inLessons/progress.dart';
 
 void main() {
@@ -33,6 +34,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MyProgressBar(title: 'Salem');
+    return MyCounter(title: 'Salem');
   }
 }
