@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class MyCounter extends StatefulWidget {
@@ -41,24 +39,49 @@ class _MyCounterState extends State<MyCounter> {
                 height: 10,
               ),
               Container(
+                height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Ink(
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(30)),
-                      child: IconButton(
-                        icon: Icon(Icons.remove_rounded),
-                        iconSize: 20,
-                        color: Colors.white,
-                        splashRadius: 20,
-                        onPressed: () {
-                          setState(() {});
-                        },
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                      child: Ink(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(30)),
+                        child: IconButton(
+                          icon: Icon(Icons.remove_rounded),
+                          iconSize: 20,
+                          color: Colors.white,
+                          splashRadius: 20,
+                          onPressed: () {
+                            setState(() {
+                              _decrement();
+                            });
+                          },
+                        ),
                       ),
                     ),
                     Text('$_element'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Ink(
+                        decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.circular(30)),
+                        child: IconButton(
+                          icon: Icon(Icons.add_rounded),
+                          iconSize: 20,
+                          color: Colors.white,
+                          splashRadius: 20,
+                          onPressed: () {
+                            setState(() {
+                              _increment();
+                            });
+                          },
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -66,13 +89,14 @@ class _MyCounterState extends State<MyCounter> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        elevation: 0,
-        onPressed: () {
-          setState(() {});
-        },
-        child: Icon(Icons.cloud_download_rounded),
-      ),
     );
+  }
+
+  void _increment() {
+    _element++;
+  }
+
+  void _decrement() {
+    _element--;
   }
 }

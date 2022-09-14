@@ -80,7 +80,7 @@ class _MyProgressBarState extends State<MyProgressBar> {
   }
 
   void _updateProgress() {
-    const oneSecond = const Duration(seconds: 1);
+    const oneSecond = Duration(seconds: 1);
     Timer.periodic(oneSecond, (Timer t) {
       setState(() {
         _progressValue += 0.2;
