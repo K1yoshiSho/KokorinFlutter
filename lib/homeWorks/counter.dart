@@ -17,7 +17,7 @@ class _MyCounterState extends State<MyCounter> {
 
   @override
   void initState() {
-    _element = 50;
+    _element = 0;
     super.initState();
   }
 

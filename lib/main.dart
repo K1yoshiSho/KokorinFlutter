@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'homeWorks/counter.dart';
+import 'inLessons/progress.dart';
 
 void main() {
   runApp(const MyApp());
