@@ -38,7 +38,7 @@ class _MyCounterState extends State<MyCounter> {
               SizedBox(
                 height: 10,
               ),
-              Container(
+              SizedBox(
                 height: 50,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
